@@ -1,0 +1,7 @@
+.bg-nav {
+  background-color: var(--second-color);
+}
+
+.active {
+  background-color: var(--main-color);
+}
