@@ -1,6 +1,6 @@
 .portfolio {
-  height: 100vh;
-  margin-top: 110px;
+  height: 115vh;
+  /* margin-top: 110px; */
 }
 .layer {
   background-color: #1abc9ce6;
@@ -11,6 +11,6 @@
 .layer:hover {
   opacity: 1;
 }
-.model__ {
-  z-index: 9999;
+.my-m {
+  margin-top: -42px;
 }

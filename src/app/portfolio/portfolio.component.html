@@ -1,9 +1,13 @@
 <div class="portfolio">
   <app-star title="portfolio component" customLineBgColor="bg-s"></app-star>
   <div class="container">
-    <div class="row g-5 my-1">
+    <div class="row g-5 my-m">
+      <!-- normal  -->
       <div class="col-lg-4 col-md-6">
-        <div class="rounded-3 overflow-hidden position-relative">
+        <div
+          class="rounded-3 overflow-hidden position-relative"
+          (click)="toggleLayer('./../../assets/poert1.png')"
+        >
           <img alt="" class="w-100 rounded-3" src="./../../assets/poert1.png" />
           <div
             class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center"
@@ -13,7 +17,10 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="rounded-3 overflow-hidden position-relative">
+        <div
+          class="rounded-3 overflow-hidden position-relative"
+          (click)="toggleLayer('./../../assets/port2.png')"
+        >
           <img alt="" class="w-100 rounded-3" src="./../../assets/port2.png" />
           <div
             class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center"
@@ -23,7 +30,10 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="rounded-3 overflow-hidden position-relative">
+        <div
+          class="rounded-3 overflow-hidden position-relative"
+          (click)="toggleLayer('./../../assets/port3.png')"
+        >
           <img alt="" class="w-100 rounded-3" src="./../../assets/port3.png" />
           <div
             class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center"
@@ -32,29 +42,13 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="rounded-3 overflow-hidden position-relative">
-          <img alt="" class="w-100 rounded-3" src="./../../assets/poert1.png" />
-          <div
-            class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center"
-          >
-            <i class="text-white fa-solid fa-plus fa-6x"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="rounded-3 overflow-hidden position-relative">
-          <img alt="" class="w-100 rounded-3" src="./../../assets/port2.png" />
-          <div
-            class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center"
-          >
-            <i class="text-white fa-solid fa-plus fa-6x"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="rounded-3 overflow-hidden position-relative">
-          <img alt="" class="w-100 rounded-3" src="./../../assets/port3.png" />
+      <!-- &  Use Structure Dirctive *ngIf -->
+      <div *ngFor="let img of imagesUrl" class="col-lg-4 col-md-6">
+        <div
+          class="rounded-3 overflow-hidden position-relative"
+          (click)="toggleLayer(img)"
+        >
+          <img alt="" class="w-100 rounded-3" [src]="img" />
           <div
             class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center"
           >
@@ -64,14 +58,17 @@
       </div>
     </div>
   </div>
-  <!-- <div
-    class="model__ position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center"
+  <div
+    *ngIf="isLayerVisible"
+    class="z-5 position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center"
+    (click)="hideLayer()"
   >
     <img
+      *ngIf="selectedImage"
       alt=""
-      src="./../../assets/poert1.png"
+      [src]="selectedImage"
       width="600px"
       class="rounded-3"
     />
-  </div> -->
+  </div>
 </div>

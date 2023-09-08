@@ -1,6 +1,6 @@
 .contact {
   height: 100vh;
-  margin-top: 110px;
+  /* margin-top: 110px; */
 }
 label {
   color: var(--main-color);
