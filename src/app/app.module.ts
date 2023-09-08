@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { StarComponent } from './star/star.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StarComponent } from './star/star.component';
     AboutComponent,
     PortfolioComponent,
     ContactComponent,
-    StarComponent
+    StarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

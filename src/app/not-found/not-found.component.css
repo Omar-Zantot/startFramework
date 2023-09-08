@@ -1,0 +1,7 @@
+.bgColor {
+  background-color: #1abc9ce6;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  color: #fff;
+}
