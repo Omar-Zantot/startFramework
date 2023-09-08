@@ -14,3 +14,7 @@ input:focus + label {
   top: -98px;
   z-index: 1;
 }
+
+button {
+  margin-left: -100px;
+}
